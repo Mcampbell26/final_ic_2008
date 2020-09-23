@@ -13,4 +13,10 @@ class Recipe
       @ingredients_required[ingredient] += ammount
     end
   end
+
+  def ingredients
+    @ingredients_required.map do |ingredient|
+      ingredient[0]
+    end
+  end
 end
