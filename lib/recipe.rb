@@ -5,4 +5,12 @@ class Recipe
     @name = name
     @ingredients_required = {}
   end
+
+  def add_ingredient(ingredient, ammount)
+    if @ingredients_required[ingredient] == nil
+      @ingredients_required[ingredient] = ammount
+    else
+      @ingredients_required[ingredient] += ammount
+    end
+  end
 end
