@@ -8,5 +8,23 @@ class CookBookTest < Minitest::Test
 
   def test_it_exists
     cookbook = CookBook.new
+
+    assert_instance_of CookBook, cookbook
+  end
+
+  def test_it_has_attributes
+    cookbook = CookBook.new
+
+    assert_equal [], cookbook.recipes
+  end
+
+  def test_it_can_add_recipes
+    skip
+    cookbook = CookBook.new
+
+    recipe1 = Recipe.new("Mac and Cheese")
+    recipe2 = Recipe.new("Cheese Burger")
+
+
   end
 end
