@@ -19,12 +19,16 @@ class CookBookTest < Minitest::Test
   end
 
   def test_it_can_add_recipes
-    skip
     cookbook = CookBook.new
 
     recipe1 = Recipe.new("Mac and Cheese")
     recipe2 = Recipe.new("Cheese Burger")
 
+    cookbook.add_recipe(recipe1)
+    cookbook.add_recipe(recipe2)
 
+    expected = [recipe1, recipe2]
+
+    assert_equal expected, cookbook.recipes
   end
 end
